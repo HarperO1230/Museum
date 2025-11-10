@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Profile — 3D Creations Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="profile">
+      <img class="avatar" src="https://via.placeholder.com/120x120.png?text=You" alt="Profile avatar">
+      <div class="profile-text">
+        <h1 class="name">Your Name</h1>
+        <p class="subtitle">3D maker • 3D-printing • Laser cutter • Cricut</p>
+      </div>
+    </div>
+    <nav class="top-nav">
+      <a href="#gallery">Gallery</a>
+      <a href="#upload">Upload</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <h2>Showcase your 3D creations</h2>
+        <p>Upload photos of prints, prototypes, and laser-cut builds — the gallery shows them right away.</p>
+        <a class="cta" href="#upload">Add a photo</a>
+      </div>
+      <div class="hero-image" aria-hidden="true"></div>
+    </section>
+
+    <section id="upload" class="upload-section card">
+      <h3>Upload photos</h3>
+      <p>Drag & drop or choose images. Images are saved in your browser (private to your device).</p>
+
+      <div id="drop-area" class="drop-area">
+        <input id="fileElem" type="file" accept="image/*" multiple />
+        <label for="fileElem" class="button">Select images</label>
+        <p class="muted">or drag images here</p>
+      </div>
+
+      <div id="upload-preview" class="upload-preview"></div>
+      <div class="controls">
+        <button id="clearAll" class="btn ghost">Clear all from this device</button>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+      <h3>Gallery</h3>
+      <div id="galleryGrid" class="gallery-grid" aria-live="polite"></div>
+      <p class="muted small">Tip: click an image to open it in full size. Delete to remove from this device's gallery.</p>
+    </section>
+
+    <section id="about" class="about card">
+      <h3>About this site</h3>
+      <p>This is a static profile site you can host on GitHub Pages. Uploads are stored in the browser using IndexedDB — they won't be visible to other people unless you configure a server or external storage.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with ❤️ • Light pink–purple theme • Host on GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
